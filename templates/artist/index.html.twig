@@ -19,7 +19,7 @@
 			{% for artist in artists %}
 				<tr>
 					<td>{{ artist.id }}</td>
-					<td>{{ artist.fisrtname }}</td>
+					<td>{{ artist.firstname }}</td>
 					<td>{{ artist.lastname }}</td>
 					<td>
 						<a href="{{ path('artist_show', {'id': artist.id}) }}">show</a>
