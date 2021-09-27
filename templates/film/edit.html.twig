@@ -3,6 +3,7 @@
 {% block title %}Edit Film{% endblock %}
 
 {% block body %}
+    <div class="container">
     <h1>Edit Film</h1>
 
     {{ include('film/_form.html.twig', {'button_label': 'Update'}) }}
@@ -10,4 +11,5 @@
     <a href="{{ path('film_index') }}">back to list</a>
 
     {{ include('film/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
