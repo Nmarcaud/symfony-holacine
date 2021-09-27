@@ -44,6 +44,10 @@ class Film
         $this->category = new ArrayCollection();
         $this->artists = new ArrayCollection();
     }
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+    }
 
     public function getId(): ?int
     {

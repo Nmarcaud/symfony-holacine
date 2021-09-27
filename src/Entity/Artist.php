@@ -22,7 +22,7 @@ class Artist
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $fisrtname;
+    private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -38,20 +38,24 @@ class Artist
     {
         $this->films = new ArrayCollection();
     }
+    public function __toString()
+    {
+        return (string) $this->getFirstname();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getFisrtname(): ?string
+    public function getFirstname(): ?string
     {
-        return $this->fisrtname;
+        return $this->firstname;
     }
 
-    public function setFisrtname(string $fisrtname): self
+    public function setFirstname(string $firstname): self
     {
-        $this->fisrtname = $fisrtname;
+        $this->firstname = $firstname;
 
         return $this;
     }

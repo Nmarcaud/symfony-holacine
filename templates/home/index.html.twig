@@ -1,12 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home
+{% endblock %}
 
 {% block body %}
 
 	{% for film in films %}
 
 		{{ film.title }}
+
+		{% for categorie in film.category %}
+			{{ categorie.name }}
+		{% endfor %}
+
+		{% for artiste in film.artists %}
+            {{ artiste.firstname }}
+			{{ artiste.lastname }}
+		{% endfor %}
 
 	{% endfor %}
 
